@@ -1,6 +1,6 @@
-const db = require("./db");
 const express = require("express");
 const cors = require("cors");
+const routes = require("./routes");   // import routes
 
 const app = express();
 
@@ -10,6 +10,9 @@ app.use(express.json());
 app.get("/", (req, res) => {
     res.send("Library Catalog Backend Running");
 });
+
+/* CONNECT ROUTES */
+app.use("/api", routes);
 
 const PORT = 5000;
 

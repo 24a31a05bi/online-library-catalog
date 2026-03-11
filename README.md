@@ -55,7 +55,9 @@ online-library-catalog/
 ## Screenshots
 1.Homepage / Book grid
 ![alt text](screenshots/homepage.png)
+
 2.Book details modal
 ![alt text](screenshots/book-details.png)
+
 3.Add Book form
 ![alt text](screenshots/add-book-form.png)

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Library Catalog</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER / NAVBAR -->
+  <header>
+    <div class="logo">📚 Online Library</div>
+    <nav>
+      <ul>
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#categories" class="nav-link">Categories</a></li>
+        <li><a href="#addBookForm" class="nav-link">Add Book</a></li>
+        <li><a href="#footer" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO / SEARCH -->
+  <section id="hero" class="hero">
+    <h1>Discover Your Next Book</h1>
+    <div class="hero-search">
+      <input type="text" id="search" placeholder="Search books or authors">
+      <select id="category">
+        <option value="">All Categories</option>
+        <option>Artificial Intelligence</option>
+        <option>Machine Learning</option>
+        <option>Data Science</option>
+        <option>Cybersecurity</option>
+        <option>Web Development</option>
+        <option>Cloud Computing</option>
+        <option>DevOps</option>
+        <option>Data Engineering</option>
+        <option>Software Engineering</option>
+        <option>Blockchain</option>
+      </select>
+      <button onclick="filterBooks()">Search</button>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section id="categories" class="categories">
+    <h2>Categories</h2>
+    <div class="category-cards">
+      <div class="category-card" onclick="filterByCategory('All')">All</div>
+      <div class="category-card" onclick="filterByCategory('Artificial Intelligence')">Artificial Intelligence</div>
+      <div class="category-card" onclick="filterByCategory('Machine Learning')">Machine Learning</div>
+      <div class="category-card" onclick="filterByCategory('Data Science')">Data Science</div>
+      <div class="category-card" onclick="filterByCategory('Cybersecurity')">Cybersecurity</div>
+      <div class="category-card" onclick="filterByCategory('Web Development')">Web Development</div>
+      <div class="category-card" onclick="filterByCategory('Cloud Computing')">Cloud Computing</div>
+      <div class="category-card" onclick="filterByCategory('DevOps')">DevOps</div>
+      <div class="category-card" onclick="filterByCategory('Data Engineering')">Data Engineering</div>
+      <div class="category-card" onclick="filterByCategory('Software Engineering')">Software Engineering</div>
+      <div class="category-card" onclick="filterByCategory('Blockchain')">Blockchain</div>
+    </div>
+  </section>
+
+  <!-- BOOKS GRID -->
+  <section class="books-section">
+    <h2>Books Collection</h2>
+    <div id="books" class="book-grid"></div>
+  </section>
+
+  <!-- ADD BOOK FORM -->
+  <section id="addBookForm">
+    <h2>Add New Book</h2>
+    <form id="formAddBook">
+      <input type="text" id="title" placeholder="Book Title" required>
+      <input type="text" id="author" placeholder="Author" required>
+      <input type="text" id="image" placeholder="Image filename (i51.jpg)" required>
+      <select id="newCategory" required>
+        <option value="">Select Category</option>
+        <option>Artificial Intelligence</option>
+        <option>Machine Learning</option>
+        <option>Data Science</option>
+        <option>Cybersecurity</option>
+        <option>Web Development</option>
+        <option>Cloud Computing</option>
+        <option>DevOps</option>
+        <option>Data Engineering</option>
+        <option>Software Engineering</option>
+        <option>Blockchain</option>
+      </select>
+      <button type="submit">Add Book</button>
+    </form>
+  </section>
+
+  <!-- BOOK DETAIL MODAL -->
+  <div id="bookModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img id="modalImage" src="" style="width:100%;height:250px;object-fit:cover;">
+      <h2 id="modalTitle"></h2>
+      <p id="modalAuthor"></p>
+      <p id="modalCategory"></p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <p>Contact: info@onlinelibrary.com | &copy; 2026 Online Library Catalog</p>
+    <div class="social-media">
+      <a href="#" target="_blank">Facebook</a> |
+      <a href="#" target="_blank">Twitter</a> |
+      <a href="#" target="_blank">Instagram</a> |
+      <a href="#" target="_blank">LinkedIn</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

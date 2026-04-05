@@ -74,6 +74,10 @@
       <input type="text" id="title" placeholder="Book Title" required>
       <input type="text" id="author" placeholder="Author" required>
       <input type="text" id="image" placeholder="Image filename (i51.jpg)" required>
+      <select id="status" required>
+        <option value="available">available</option>
+        <option value="checked_out">checked_out</option>
+      </select>
       <select id="newCategory" required>
         <option value="">Select Category</option>
         <option>Artificial Intelligence</option>
@@ -99,6 +103,7 @@
       <h2 id="modalTitle"></h2>
       <p id="modalAuthor"></p>
       <p id="modalCategory"></p>
+      <p id="modalStatus"></p>
     </div>
   </div>
 

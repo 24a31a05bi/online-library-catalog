@@ -30,6 +30,7 @@ function displayBooks(books, reset = true) {
       <div class="book-title">${book.title}</div>
       <div class="book-author">${book.author}</div>
       <div class="book-category">${book.category}</div>
+      <div class="book-status ${book.status}">${book.status}</div>
     `;
     card.addEventListener("click", () => openModal(book));
     booksContainer.appendChild(card);
@@ -77,6 +78,8 @@ function openModal(book){
   document.getElementById("modalTitle").textContent = book.title;
   document.getElementById("modalAuthor").textContent = "Author: " + book.author;
   document.getElementById("modalCategory").textContent = "Category: " + book.category;
+  document.getElementById("modalStatus").innerHTML =
+    `Status: <span class="status-pill ${book.status}">${book.status}</span>`;
 }
 function closeModal(){ document.getElementById("bookModal").style.display = "none"; }
 
@@ -87,11 +90,12 @@ formAddBook.addEventListener("submit", function(e){
   const author = document.getElementById("author").value;
   const category = document.getElementById("newCategory").value;
   const image = document.getElementById("image").value;
+  const status = document.getElementById("status").value;
 
   fetch("http://localhost:5000/api/books", {
     method:"POST",
     headers: {"Content-Type":"application/json"},
-    body: JSON.stringify({title, author, category, image})
+    body: JSON.stringify({title, author, category, image, status})
   })
   .then(res => res.json())
   .then(data => {

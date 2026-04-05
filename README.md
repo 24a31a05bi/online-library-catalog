@@ -1,7 +1,7 @@
 # Online Library Catalog
 
 ## Description
-A web-based library catalog built with **HTML, CSS, JavaScript (frontend)** and **Node.js, Express.js, MySQL (backend)**. Users can browse books by category, search for titles, and view book details including cover image, title, author, and category.  
+A web-based library catalog built with **HTML, CSS, JavaScript (frontend)** and **Node.js, Express.js, MySQL (backend)**. Users can browse books by category, search for titles, and view book details including cover image, title, author, category and availability or status.  
 
 The project demonstrates core concepts: **Node.js backend, MySQL tables, and forms** for adding books.
 
@@ -15,6 +15,7 @@ The project demonstrates core concepts: **Node.js backend, MySQL tables, and for
 - Add new books via backend form
 - "+ More" feature to dynamically load additional books
 - Well-organized folder structure
+- Check availability of book
 
 Optional future improvements:
 - Read/Download PDF feature
